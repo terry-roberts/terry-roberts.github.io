@@ -1,3 +1,5 @@
-name: Hank Quinlan, Horrible Cop
+name: Terry
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+sass:
+  style: compressed

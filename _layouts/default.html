@@ -8,6 +8,7 @@
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
+			<!--
 			<nav>
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
@@ -16,6 +17,15 @@
 	        		<li><a href="/blog">Blog</a></li>
 	    		</ul>
 			</nav>
+			-->
+
+<nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
+  <div class="c-navigation__container u-container">
+    <a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="/">Home</a>
+    <a class="c-navigation__item {% if page.url == '/articles/' %}is-active{% endif %}" href="/blog/">Blog</a>
+  </div>
+</nav>
+
 			<div class="container">
 			
 			{{ content }}
