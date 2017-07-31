@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono:400,500' rel='stylesheet' type='text/css'>
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-			<!-- link to main stylesheet -->			
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<!--
+<html>
+
+<head>
+	<title>{{ page.title }}</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700|Roboto+Mono:400,500' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- link to main stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+<body>
+	<!--
 			<nav>
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
@@ -19,23 +21,36 @@
 			</nav>
 			-->
 
-<nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
-  <div class="c-navigation__container u-container">
-    <a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="/">Home</a>
-    <a class="c-navigation__item {% if page.url == '/articles/' %}is-active{% endif %}" href="/blog/">Blog</a>
-  </div>
-</nav>
+	<nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
+		<div class="c-navigation__container u-container">
+			<a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="/">Home</a>
+			<a class="c-navigation__item {% if page.url == '/articles/' %}is-active{% endif %}" href="/blog/">Blog</a>
+		</div>
+	</nav>
 
-			<div class="container">
-			
+	<article class="c-article">
+		<header class="c-header c-article__header">
+			<div class="u-container">
+				<h1 class="c-header__title">{{ page.title }}</h1>
+			</div>
+		</header>
+
+		<div class="c-article__main">
 			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:tezza2001@gmail.com">email</a></li>
-	        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+		</div>
+	</article>
+
+	
+	<footer class="c-footer">
+		<div class="u-container c-footer__container">
+			<p>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
+			<p>
+				<a href="mailto:tezza2001@gmail.com">email</a>
+				<a href="https://github.com/hankquinlan">github.com/zztop101</a>
+			</p>
+		</div>
+	</footer>
+
+</body>
+
+</html>
