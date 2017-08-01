@@ -10,21 +10,11 @@
 </head>
 
 <body>
-	<!--
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			-->
 
 	<nav class="c-navigation {% if site.fixedNav == 'true' %}is-fixed{% endif %}">
 		<div class="c-navigation__container u-container">
 			<a class="c-navigation__item {% if page.url == '/' %}is-active{% endif %}" href="/">Home</a>
-			<a class="c-navigation__item {% if page.url == '/articles/' %}is-active{% endif %}" href="/blog/">Blog</a>
+			<a class="c-navigation__item {% if page.url == '/blog/' %}is-active{% endif %}" href="/blog/">Blog</a>
 		</div>
 	</nav>
 
@@ -46,7 +36,7 @@
 			<p>&copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
 			<p>
 				<a href="mailto:tezza2001@gmail.com">email</a>
-				<a href="https://github.com/hankquinlan">github.com/zztop101</a>
+				<a href="https://github.com/terry-roberts">github.com/terry-roberts</a>
 			</p>
 		</div>
 	</footer>
